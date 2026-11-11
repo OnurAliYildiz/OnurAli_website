@@ -1,0 +1,165 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Onur Ali Yıldız</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap">
+<style>
+  /* Layout: single column, hero name up top, three link cards as the core, quiet about text. */
+  :root {
+    --bg: #f6f5f1;
+    --surface: #ffffff;
+    --fg: #15171c;
+    --muted: #5b606b;
+    --line: #dcdcd4;
+    --accent: #c2410c;
+    --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1115;
+      --surface: #171a21;
+      --fg: #eceef2;
+      --muted: #9aa1ad;
+      --line: #2a2f3a;
+      --accent: #fb923c;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1115;
+    --surface: #171a21;
+    --fg: #eceef2;
+    --muted: #9aa1ad;
+    --line: #2a2f3a;
+    --accent: #fb923c;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 48px;
+  }
+  .logo {
+    display: block;
+    background: #15171c;
+    border-radius: 12px;
+    padding: 12px;
+    width: 72px;
+    height: 72px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  main { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px; }
+  h1, h2 { font-family: var(--font-display); line-height: 1.15; text-wrap: balance; margin: 0; }
+  h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); font-weight: 700; letter-spacing: -0.02em; }
+  h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  .lede { color: var(--muted); font-size: 1.1rem; max-width: 56ch; margin: 16px 0 0; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .link-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: inherit;
+    text-decoration: none;
+    min-width: 0;
+  }
+  .link-card:hover, .link-card:focus-visible { border-color: var(--accent); }
+  .link-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .link-card strong { font-family: var(--font-display); font-size: 1.1rem; }
+  .link-card span { color: var(--muted); font-size: 0.9rem; overflow-wrap: anywhere; }
+  .about p { margin: 0 0 12px; max-width: 64ch; font-family: var(--font-body); font-size: 1.1rem; color: var(--muted); }
+  .about p:last-child { margin-bottom: 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .tags li {
+    list-style: none;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+  }
+  ul.tags { padding: 0; margin: 16px 0 0; }
+  footer {
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer p { margin: 0; color: var(--accent); }
+  footer .logo { margin: 0 0 0 auto; background: none; border-radius: 0; padding: 0; width: 112px; height: 112px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .link-card { transition: border-color 0.15s ease; }
+  }
+</style>
+
+<main>
+  <header>
+    <p class="eyebrow">Dijital Oyun Tasarımı</p>
+    <h1>Onur Ali Yıldız</h1>
+    <p class="lede">Merhaba, ben Onur. Dijital oyun tasarımı öğrencisiyim. Oyun geliştirmenin yazılım ve level tasarımı tarafıyla ilgileniyor, bu alanda çalışmalar yapıyorum.</p>
+  </header>
+
+  <section aria-labelledby="links-title">
+    <h2 id="links-title">Bağlantılar</h2>
+    <nav class="links">
+      <a class="link-card" href="https://onurali.itch.io/" target="_blank" rel="noopener">
+        <strong>itch.io</strong>
+        <span>Oyunlarım ve denemelerim</span>
+      </a>
+      <a class="link-card" href="https://github.com/OnurAliYildiz" target="_blank" rel="noopener">
+        <strong>GitHub</strong>
+        <span>Kod ve projeler</span>
+      </a>
+      <a class="link-card" href="https://www.linkedin.com/in/onur-ali-y%C4%B1ld%C4%B1z-00a841327/" target="_blank" rel="noopener">
+        <strong>LinkedIn</strong>
+        <span>Profesyonel geçmişim</span>
+      </a>
+    </nav>
+  </section>
+
+  <section class="about" aria-labelledby="about-title">
+    <h2 id="about-title">Hakkımda</h2>
+    <p>İstanbul Topkapı Üniversitesi Dijital Oyun Tasarımı bölümünde 4. sınıf öğrencisiyim. Çocukluğumdan beri oyunlara duyduğum ilgi, zamanla oyun geliştirmeye yönelik bir tutkuya dönüştü ve bu alanda kendimi geliştirmeye yöneltti.</p>
+    <p>Oyun geliştirmenin özellikle yazılım ve level tasarımı alanlarına ilgi duyuyorum. Farklı projelerde edindiğim deneyimlerle teknik becerilerimi geliştirmeyi, yaratıcı fikirleri oynanabilir deneyimlere dönüştürmeyi ve oyun geliştirme alanında profesyonel olarak ilerlemeyi hedefliyorum.</p>
+    <ul class="tags" aria-label="İlgi alanları">
+      <li>Oyun geliştirme</li>
+      <li>Yazılım</li>
+      <li>Oyun tasarımı</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="footer-text">
+      <p>İstanbul, Türkiye</p>
+      <p>onuraliyildiz@gmail.com</p>
+    </div>
+    <img class="logo" src="logo.png" alt="Onur Ali Yıldız logosu" width="112" height="112">
+  </footer>
+</main>
+
+</body></html>
