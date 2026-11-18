@@ -1,11 +1,11 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!doctype html>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="OnurAliYildiz:viewport-fit-sides" content="cover">
 <title>Onur Ali Yıldız</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap">
 <style>
-  /* Layout: single column, hero name up top, three link cards as the core, quiet about text. */
+  /* Layout: single column, hero name up top, link cards as the core, quiet about text. Dark palette on every theme. */
   :root {
     --bg: #0f1115;
     --surface: #171a21;
@@ -48,6 +48,24 @@
     padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px));
     padding-block: 48px;
   }
+  .lang-toggle {
+    position: fixed;
+    top: calc(12px + env(safe-area-inset-top, 0px));
+    right: max(16px, env(safe-area-inset-right, 0px));
+    z-index: 5;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    background: var(--surface);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .lang-toggle:hover, .lang-toggle:focus-visible { border-color: var(--accent); color: var(--accent); }
+  .lang-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .logo {
     display: block;
     background: #15171c;
@@ -112,55 +130,98 @@
     gap: 16px;
   }
   footer p { margin: 0; color: var(--accent); }
+  footer .mail { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+  footer .mail:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   footer .logo { margin: 0 0 0 auto; background: none; border-radius: 0; padding: 0; width: 112px; height: 112px; }
   @media (prefers-reduced-motion: no-preference) {
     .link-card { transition: border-color 0.15s ease; }
   }
 </style>
 
+<button type="button" id="lang-toggle" class="lang-toggle">ENG</button>
+
 <main>
   <header>
-    <p class="eyebrow">Dijital Oyun Geliştiricisi</p>
+    <p class="eyebrow" data-tr="Dijital Oyun Geliştiricisi" data-en="Digital Game Developer">Dijital Oyun Geliştiricisi</p>
     <h1>Onur Ali Yıldız</h1>
-    <p class="lede">Merhaba, ben Onur. Dijital oyun tasarımı öğrencisiyim. Oyun geliştirmenin yazılım ve level tasarımı tarafıyla ilgileniyor, bu alanda çalışmalar yapıyorum.</p>
+    <p class="lede" data-tr="Merhaba, ben Onur. Dijital oyun tasarımı öğrencisiyim. Oyun geliştirmenin yazılım ve level tasarımı tarafıyla ilgileniyor, bu alanda çalışmalar yapıyorum." data-en="Hi, I'm Onur. I'm a digital game design student. I'm interested in the software and level design sides of game development, and I work on projects in this area.">Merhaba, ben Onur. Dijital oyun tasarımı öğrencisiyim. Oyun geliştirmenin yazılım ve level tasarımı tarafıyla ilgileniyor, bu alanda çalışmalar yapıyorum.</p>
   </header>
 
   <section aria-labelledby="links-title">
-    <h2 id="links-title">Bağlantılar</h2>
+    <h2 id="links-title" data-tr="Bağlantılar" data-en="Links">Bağlantılar</h2>
     <nav class="links">
-      <a class="link-card" href="https://onurali.itch.io/" target="_blank" rel="noopener">
+      <a class="link-card" href="https://onurali.itch.io/" target="_blank" rel="noopener" data-title-tr="Itch.io' mu görmek için tıklayın" data-title-en="Visit my itch.io">
         <strong>itch.io</strong>
-        <span>Oyunlarım ve denemelerim</span>
+        <span data-tr="Oyunlarım ve denemelerim" data-en="My games and experiments">Oyunlarım ve denemelerim</span>
       </a>
-      <a class="link-card" href="https://github.com/OnurAliYildiz" target="_blank" rel="noopener">
+      <a class="link-card" href="https://github.com/OnurAliYildiz" target="_blank" rel="noopener" data-title-tr="GitHub' ımı görmek için tıklayın" data-title-en="Visit my GitHub">
         <strong>GitHub</strong>
-        <span>Kod ve projeler</span>
+        <span data-tr="Kod ve projeler" data-en="Code and projects">Kod ve projeler</span>
       </a>
-      <a class="link-card" href="https://www.linkedin.com/in/onur-ali-y%C4%B1ld%C4%B1z-00a841327/" target="_blank" rel="noopener">
+      <a class="link-card" href="https://www.linkedin.com/in/onur-ali-y%C4%B1ld%C4%B1z-00a841327/" target="_blank" rel="noopener" data-title-tr="LinkedIn' imi görmek için tıklayın" data-title-en="Visit my LinkedIn">
         <strong>LinkedIn</strong>
-        <span>Profesyonel geçmişim</span>
+        <span data-tr="Profesyonel geçmişim" data-en="My professional background">Profesyonel geçmişim</span>
       </a>
     </nav>
   </section>
 
   <section class="about" aria-labelledby="about-title">
-    <h2 id="about-title">Hakkımda</h2>
-    <p>İstanbul Topkapı Üniversitesi Dijital Oyun Tasarımı bölümünde 4. sınıf öğrencisiyim. Çocukluğumdan beri oyunlara duyduğum ilgi, zamanla oyun geliştirmeye yönelik bir tutkuya dönüştü ve bu alanda kendimi geliştirmeye yöneltti.</p>
-    <p>Oyun geliştirmenin özellikle yazılım ve level tasarımı alanlarına ilgi duyuyorum. Farklı projelerde edindiğim deneyimlerle teknik becerilerimi geliştirmeyi, yaratıcı fikirleri oynanabilir deneyimlere dönüştürmeyi ve oyun geliştirme alanında profesyonel olarak ilerlemeyi hedefliyorum.</p>
-    <ul class="tags" aria-label="İlgi alanları">
-      <li>Oyun geliştirme</li>
-      <li>Yazılım</li>
-      <li>Oyun tasarımı</li>
+    <h2 id="about-title" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
+    <p data-tr="İstanbul Topkapı Üniversitesi Dijital Oyun Tasarımı bölümünde 4. sınıf öğrencisiyim. Çocukluğumdan beri oyunlara duyduğum ilgi, zamanla oyun geliştirmeye yönelik bir tutkuya dönüştü ve bu alanda kendimi geliştirmeye yöneltti." data-en="I'm a 4th-year student in the Digital Game Design department at Istanbul Topkapı University. My interest in games since childhood grew into a passion for game development, which pushed me to keep improving in this field.">İstanbul Topkapı Üniversitesi Dijital Oyun Tasarımı bölümünde 4. sınıf öğrencisiyim. Çocukluğumdan beri oyunlara duyduğum ilgi, zamanla oyun geliştirmeye yönelik bir tutkuya dönüştü ve bu alanda kendimi geliştirmeye yöneltti.</p>
+    <p data-tr="Oyun geliştirmenin özellikle yazılım ve level tasarımı alanlarına ilgi duyuyorum. Farklı projelerde edindiğim deneyimlerle teknik becerilerimi geliştirmeyi, yaratıcı fikirleri oynanabilir deneyimlere dönüştürmeyi ve oyun geliştirme alanında profesyonel olarak ilerlemeyi hedefliyorum." data-en="I'm especially interested in software and level design. Through various projects, I aim to improve my technical skills, turn creative ideas into playable experiences, and advance professionally in game development.">Oyun geliştirmenin özellikle yazılım ve level tasarımı alanlarına ilgi duyuyorum. Farklı projelerde edindiğim deneyimlerle teknik becerilerimi geliştirmeyi, yaratıcı fikirleri oynanabilir deneyimlere dönüştürmeyi ve oyun geliştirme alanında profesyonel olarak ilerlemeyi hedefliyorum.</p>
+    <ul class="tags" data-aria-tr="İlgi alanları" data-aria-en="Interests" aria-label="İlgi alanları">
+      <li data-tr="Oyun geliştirme" data-en="Game development">Oyun geliştirme</li>
+      <li data-tr="Yazılım" data-en="Software">Yazılım</li>
+      <li data-tr="Oyun tasarımı" data-en="Game design">Oyun tasarımı</li>
     </ul>
   </section>
 
   <footer>
     <div class="footer-text">
-      <p>İstanbul, Türkiye</p>
-      <p>onuraliyildiz@gmail.com</p>
+      <p data-tr="İstanbul, Türkiye" data-en="Istanbul, Turkey">İstanbul, Türkiye</p>
+      <p><a class="mail" href="https://mail.google.com/mail/?view=cm&fs=1&to=onuraliyildiz@gmail.com" target="_blank" rel="noopener" data-title-tr="Mail göndermek için tıklayın" data-title-en="Click to send an email">onuraliyildiz@gmail.com</a></p>
+      <p><a class="mail" href="https://www.instagram.com/onur4li/" target="_blank" rel="noopener" data-title-tr="İG hesabımı görmek için tıklayın" data-title-en="Visit my Instagram" data-tr="İnstagram" data-en="Instagram">İnstagram</a></p>
     </div>
-    <img class="logo" src="logo.png" alt="Onur Ali Yıldız logosu" width="112" height="112">
+    <img class="logo" src="logo.png" alt="Onur Ali Yıldız logosu" data-alt-tr="Onur Ali Yıldız logosu" data-alt-en="Onur Ali Yıldız logo" width="112" height="112">
   </footer>
 </main>
+
+<script>
+  (function () {
+    var KEY = 'site-lang';
+    var btn = document.getElementById('lang-toggle');
+    var lang = 'tr';
+    try {
+      var saved = localStorage.getItem(KEY);
+      if (saved === 'en' || saved === 'tr') lang = saved;
+    } catch (e) {}
+
+    function apply(next) {
+      lang = next;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-' + lang + ']').forEach(function (el) {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+      document.querySelectorAll('[data-title-' + lang + ']').forEach(function (el) {
+        el.setAttribute('title', el.getAttribute('data-title-' + lang));
+      });
+      document.querySelectorAll('[data-alt-' + lang + ']').forEach(function (el) {
+        el.setAttribute('alt', el.getAttribute('data-alt-' + lang));
+      });
+      document.querySelectorAll('[data-aria-' + lang + ']').forEach(function (el) {
+        el.setAttribute('aria-label', el.getAttribute('data-aria-' + lang));
+      });
+      btn.textContent = lang === 'tr' ? 'ENG' : 'TUR';
+      btn.setAttribute('aria-label', lang === 'tr' ? 'Switch to English' : 'Türkçe\'ye geç');
+    }
+
+    btn.addEventListener('click', function () {
+      apply(lang === 'tr' ? 'en' : 'tr');
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+    });
+
+    apply(lang);
+  })();
+</script>
 
 </body></html>
